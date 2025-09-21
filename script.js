@@ -15,3 +15,17 @@
         input.value= "";
         result.value= "";
       }
+
+
+        input.addEventListener("input", () => {
+    let exp = input.value;
+    try {
+      if (exp.trim() !== "") {
+        result.value = eval(exp);
+      } else {
+        result.value = "";
+      }
+    } catch {
+      result.value = "";
+    }
+  });
